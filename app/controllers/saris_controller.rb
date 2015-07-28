@@ -1,0 +1,2 @@
+class SarisController < ApplicationController
+end
