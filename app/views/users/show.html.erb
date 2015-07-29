@@ -1,9 +1,11 @@
-<h1>This is where a User can view their profile</h1>
 
-<p>New and Returning Users will have 4 options here:</p>
+Welcome  <%= @user.name %>
 <ul>
-  <li>They will have the option to add a sari, include a link to form for upload</li>
-  <li>They will have the option to view their sari uploads</li>
-  <li>They will have the option to share their sari on a gallery page</li>
-  <li>They will have the option to view ALL sari uploads that other users have shared</li>
+  <li>  <%= link_to 'Create New Gallery', new_sari_path %></li>
+  <li>  <%= link_to 'Edit Your Gallery', edit_sari_path %></li>
+  <li> <%= link_to 'View Your Galllery', sari_path %> </li>
+  <li> <%= link_to 'View Entire Sari Sakhi Gallery', saris_path %> </li>
+
 </ul>
+
+<%= link_to 'Logout', session_path, method: :delete %>
