@@ -1,18 +1,19 @@
-Hello! Take a Look Around, Comment, and Connect!
+<h2>Hello! Take a Look Around, Comment, and Connect!</h2>
+<br>
+<h4><%= link_to 'Back to Your Profile Page', user_path(current_user) %></h4>
 <br>
 <br>
 <% @saris.each do |sari| %>
- <br>
- <br>
+<br>
+<br>
+<br>
  Created by: <%= User.find_by_id(sari.user_id).name %>
  <br>
- Image:<%= sari.image %>
+ <img src='<%= sari.image %>' width="200" height="200">
  <br>
  Story: <%= sari.story %>
- <br>
- <br>
- <br>
  <% end %>
+<br>
 <br>
 <br>
 <%= link_to 'Back to Your Profile Page', user_path(current_user) %>
