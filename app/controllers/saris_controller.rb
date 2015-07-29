@@ -13,6 +13,7 @@ class SarisController < ApplicationController
   end
 
   def edit
+
   end
 
   def index
@@ -24,4 +25,7 @@ class SarisController < ApplicationController
     params.require(:sari).permit(:image, :story, :owner)
   end
 end
+
+
+
 
