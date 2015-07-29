@@ -48,12 +48,6 @@ rp = Sari.create(
   owner: "Rupali P."
   )
 
-gastudent = User.create(
-  name: "Prity",
-  email: "p@p.com",
-  password: "test",
-  password_confirmation: "test"
-  )
 
 janki_s.saris.push js
 sadhana_k.saris.push sk

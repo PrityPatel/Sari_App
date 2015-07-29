@@ -1,4 +1,4 @@
-<h1>Upload A New Sari</h1>
+<h1>Create Sari Gallery!</h1>
 <%= form_for @sari do |f| %>
 <% if @sari.errors.any? %>
   <div class="error_messages">
@@ -22,6 +22,7 @@
   <%= f.label :owner %>
   <%= f.text_field :owner %>
 </div>
+<br>
 <div class="actions"><%= f.submit %></div>
 <% end %>
 <br>

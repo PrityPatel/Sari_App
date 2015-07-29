@@ -1,11 +1,42 @@
 
-Welcome  <%= @user.name %>
+<h2>Welcome <%= @user.name %>!</h2>
+<br>
 <ul>
-  <li>  <%= link_to 'Create New Gallery', new_sari_path %></li>
-  <li>  <%= link_to 'Edit Your Gallery', edit_sari_path %></li>
-  <li> <%= link_to 'View Your Galllery', sari_path %> </li>
-  <li> <%= link_to 'View Entire Sari Sakhi Gallery', saris_path %> </li>
-
+  <li><%= link_to 'Create New Sari Gallery', new_sari_path %></li><br>
+  <li> <%= link_to 'View Your Galllery' %> </li><br>
+  <li> <%= link_to 'View the Entire Sari Sakhi Gallery', saris_path %> </li>
 </ul>
+<br>
+<br>
+<h3>Your Sari Gallery</h3>
+<h4>Don't see anything yet?  <%= link_to 'Create New Sari Gallery by clicking here', new_sari_path %></h4>
+<br>
+<% @user_saris.each do |sari| %>
+  Image:<%= sari.image %>
+  <br>
+  <br>
+  Story: <%= sari.story %>
+  <br>
+  <br>
+  Sari Owner: <%= sari.owner %>
+  <br>
+  <br>
+  <% if current_user == @user %>
+     <%= link_to 'Edit Sari', edit_sari_path(sari) %>
+     <br>
+     <br>
+     <br>
+    <% end %>
+  <% end %>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Browse Other Saris', saris_path(current_user) %>
+<br>
+<br>
 <%= link_to 'Logout', session_path, method: :delete %>
+
+

@@ -1,5 +1,23 @@
-This is where a User can view ALL saris uploaded by ALL USERS
+Hello! Take a Look Around, Comment, and Connect!
+<br>
+<br>
+<% @saris.each do |sari| %>
+ <br>
+ <br>
+ Created by: <%= User.find_by_id(sari.user_id).name %>
+ <br>
+ Image:<%= sari.image %>
+ <br>
+ Story: <%= sari.story %>
+ <br>
+ <br>
+ <br>
+ <% end %>
 <br>
 <br>
 <%= link_to 'Back to Your Profile Page', user_path(current_user) %>
+<br>
+<br>
+<%= link_to 'Logout', session_path(current_user), method: :delete %>
+
 
