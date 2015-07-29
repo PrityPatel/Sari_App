@@ -4,7 +4,7 @@ class SarisController < ApplicationController
   end
 
   def create
-    @sari = Sari.new
+    @sari = Sari.new(sari_params)
     if @sari.save
       redirect_to user_path(current_user)
     end
@@ -18,9 +18,9 @@ class SarisController < ApplicationController
 
 end
 
-  # private
-  # def sari_params
-  #   params.require(current_user).permit(:image, :story, :owner)
-  # end
+  private
+  def sari_params
+    params.require(:sari).permit(:image, :story, :owner)
+  end
 
 
