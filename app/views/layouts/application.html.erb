@@ -9,6 +9,11 @@
 <body>
 
 
+<% flash.each do |name, message| %>
+<br>
+<%= message %>
+<br>
+<% end %>
 
 <%= yield %>
 

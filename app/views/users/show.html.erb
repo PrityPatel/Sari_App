@@ -3,7 +3,7 @@
 <br>
 <ul>
   <li><%= link_to 'Create New Sari Gallery', new_sari_path %></li><br>
-  <li> <%= link_to 'View Your Galllery' %> </li><br>
+  <li> <%= link_to 'View Your Gallery' %> </li><br>
   <li> <%= link_to 'View the Entire Sari Sakhi Gallery', saris_path %> </li>
 </ul>
 <br>
@@ -18,6 +18,7 @@
   <br>
   <% if current_user == @user %>
      <%= link_to 'Edit Gallery', edit_sari_path(sari) %>
+     <%= link_to 'Delete Gallery', sari_path(sari), method: :delete %>
      <br>
      <br>
      <br>

@@ -6,7 +6,7 @@ class SarisController < ApplicationController
   def create
     @sari = current_user.saris.new(sari_params)
     if @sari.save
-      redirect_to user_path(current_user)
+      redirect_to user_path(current_user), notice: "New Sari Added!"
     else
       render "new"
     end
@@ -19,23 +19,22 @@ class SarisController < ApplicationController
   def update
     @sari = Sari.find(params[:id])
     if @sari.update_attributes(sari_params)
-    redirect_to user_path(current_user)
+    redirect_to user_path(current_user), notice: "Sari Updated!"
     else
     render 'edit'
     end
   end
 
-  # def destroy
-  #   @user = User.find_by_id(current_user.id)
-  #   sari = Sari.find(params[:id])
-  #   if sari.destroy
-  #     redirect_to current_user, notice: "Sari deleted!"
-  #   else
-  #     flash[:error] =
-  #     "Error attempting to delete sari."
-  #     redirect_to user_path(@user)
-  #   end
-  # end
+  def destroy
+    sari = Sari.find(params[:id])
+    if sari.destroy
+      redirect_to current_user, notice: "Sari deleted!"
+    else
+      flash[:error] =
+      "Error attempting to delete sari."
+      redirect_to user_path(@user)
+    end
+  end
 
 
   def index
