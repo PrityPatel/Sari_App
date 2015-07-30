@@ -1,4 +1,8 @@
 class SarisController < ApplicationController
+  def index
+    @saris = Sari.all
+  end
+
   def new
     @sari = current_user.saris.new
   end
@@ -36,10 +40,6 @@ class SarisController < ApplicationController
     end
   end
 
-
-  def index
-    @saris = Sari.all
-  end
 
   private
   def sari_params
