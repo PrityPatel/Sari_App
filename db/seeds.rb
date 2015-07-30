@@ -68,9 +68,10 @@ r2 = Sari.create(
 
 
 
-prity.saris.push p1
 prity.saris.push p2
 tiffany.saris.push t1
-tiffany.saris.push t2
 rachelle.saris.push r1
+tiffany.saris.push t2
 rachelle.saris.push r2
+prity.saris.push p1
+
