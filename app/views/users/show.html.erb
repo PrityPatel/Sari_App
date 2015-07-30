@@ -2,6 +2,7 @@
 <h2>Welcome Back <%= @user.name %>!</h2>
 <ul>
   <li><%= link_to 'Create New Sari Gallery', new_sari_path %></li><br>
+  <li><%= link_to 'Edit Profile', edit_user_path %></li><br>
   <li> <%= link_to 'View the Entire Sari Sakhi Gallery', saris_path %> </li>
 </ul>
 <br>
@@ -46,5 +47,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sit quis laboru
 <br>
 <br>
 <%= link_to 'Logout', session_path, method: :delete %>
+<br>
+<br>
+<%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
 
 
