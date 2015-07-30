@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   def index
+    if logged_in?
+      @saris = Sari.all
+    else
+      redirect_to root_path
+    end
   end
 
   def new
@@ -42,7 +47,7 @@ class UsersController < ApplicationController
     else
       flash[:error] =
       "Error attempting to delete user."
-      redirect_to user_path(@user)
+      redirect_to user_path(current_user)
     end
   end
 

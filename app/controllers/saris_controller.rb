@@ -1,6 +1,10 @@
 class SarisController < ApplicationController
   def index
-    @saris = Sari.all
+    if logged_in?
+      @saris = Sari.all
+    else
+      redirect_to root_path
+    end
   end
 
   def new
