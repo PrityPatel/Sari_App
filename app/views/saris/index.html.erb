@@ -1,7 +1,7 @@
 
 <h4><%= link_to 'Go to Your Profile Page', user_path(current_user) %></h4>
 <h2>Hi <%= current_user.name %>! Browse to see what's trending in Sari fashions!</h2>
-<h3><center> Or change what's trending... <%= link_to 'Upload Your Sari Gallery!', new_sari_path %></h3>
+<h3><center> Have an influence on what's trending... <%= link_to 'Upload Your Sari Gallery!', new_sari_path %></h3>
 <h2>Like, Comment and Connect with other users!</h2>
 <br>
 <% @saris.each do |sari| %>
