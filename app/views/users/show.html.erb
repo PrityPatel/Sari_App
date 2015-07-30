@@ -1,5 +1,11 @@
 
 <h2><%= @user.name %>'s Personal Profile Page</h2>
+<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "500" height= "200">
+<h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
+<br>
+<br>
+<h3>We want You to have an active influence on the Sari styles that trend in the marketplace.</h3>
+
 <ul>
   <li><%= link_to 'Create New Sari Gallery', new_sari_path %></li><br>
   <li><%= link_to 'Edit Your Profile', edit_user_path %></li><br>
@@ -7,33 +13,19 @@
 </ul>
 <br>
 <br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quo doloremque, nihil unde sapiente at amet, dolorem inventore quaerat repudiandae deleniti. Nam voluptates fugiat quae quam sunt praesentium nihil voluptatum!
-<br>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sit quis laborum minus repellat quod quo beatae, laboriosam quae ducimus, alias dolor repellendus eveniet libero consectetur, tenetur ipsam tempore nostrum?
-<br>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quo doloremque, nihil unde sapiente at amet, dolorem inventore quaerat repudiandae deleniti. Nam voluptates fugiat quae quam sunt praesentium nihil voluptatum!
-<br>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sit quis laborum minus repellat quod quo beatae, laboriosam quae ducimus, alias dolor repellendus eveniet libero consectetur, tenetur ipsam tempore nostrum?
-<br>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sit quis laborum minus repellat quod quo beatae, laboriosam quae ducimus, alias dolor repellendus eveniet libero consectetur, tenetur ipsam tempore nostrum?
-<br>
 <br>
 <h3>Scroll Down to View All of Your Posts</h3>
 <h4>Don't see anything yet?  <%= link_to 'Create New Sari Gallery by clicking here', new_sari_path %></h4>
 <br>
 <% @user_saris.each do |sari| %>
-  <img src='<%= sari.image %>' width="200" height="200">
-  <%= sari.story %> <br>
-  <br>
+  <center><img src='<%= sari.image %>' width="200" height="200"><br>
+  <%= sari.story %>
   <br>
   <% if current_user == @user %>
      <%= link_to 'Edit Gallery', edit_sari_path(sari) %>
      <%= link_to 'Delete Gallery', sari_path(sari), method: :delete, data: {confirm: "Are you sure?"} %>
      <br>
+   </center>
      <br>
      <br>
     <% end %>
@@ -45,9 +37,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sit quis laboru
 <%= link_to 'Browse Sari Galleries', saris_path(current_user) %>
 <br>
 <br>
-<%= link_to 'Logout', session_path, method: :delete %>
+<%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"} %>
 <br>
 <br>
 <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
-
+<br>
 

@@ -7,8 +7,7 @@
 <% @saris.each do |sari| %>
 <br>
 <br>
-<br>
- Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
+ <center>Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
  <img src='<%= sari.image %>' width="200" height="200"><br>
  <%= sari.story %> <br>
  <br>
@@ -19,8 +18,9 @@
 <%= link_to 'Go to Your Profile Page', user_path(current_user) %>
 <br>
 <br>
-<%= link_to 'Logout', session_path(current_user), method: :delete %>
+<%= link_to 'Logout', session_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
 <br>
 <br>
 
-<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg">
+<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "500" height= "200">
+</center>
