@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
+
+  # new_session GET    /sessions/new(.:format)   sessions#new
   def new
  end
 
+# sessions POST   /sessions(.:format)       sessions#create
+# log-in credentials - create new session
  def create
    user = User.find_by(email: params[:email])
    if user && user.authenticate(params[:password])
@@ -13,6 +17,8 @@ class SessionsController < ApplicationController
    end
  end
 
+# session DELETE /sessions/:id(.:format)   sessions#destroy
+# log out -session ended
  def destroy
    session[:user_id] = nil
    redirect_to root_path, notice: "Logged out!"
