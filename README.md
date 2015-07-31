@@ -26,15 +26,15 @@ Project #2: Building A Full-stack Application
 
 - [x] * A **link to your hosted working app** in the URL section of your Github repo.
 
-- []* **A ``readme.md`` file** with explanations of:
+- [ ]* **A ``readme.md`` file** with explanations of:
 
- - [] * The technologies used
+ - [ ] * The technologies used
 
-  - []* Installation instructions (seed data, etc.)
+  - [ ]* Installation instructions (seed data, etc.)
 
-  - []* Unsolved problems, etc.
+  - [ ]* Unsolved problems, etc.
 
-- [x]* **Wireframes attached to a Trello card**.
+- [x]* Wireframes attached to a Trello card**.
 
 ---
 
