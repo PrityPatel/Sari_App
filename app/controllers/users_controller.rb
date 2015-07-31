@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate, except: [:new, :create]
+  before_action :authorize
+
   # normally this would be all users, though i have chosen not to show an index of all users, though in case someone goes to a link /users, it will redirect to the root path
 # get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index
 def index
@@ -71,5 +74,14 @@ def index
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def authorize
+    @user = User.find_by_id(params[:id])
+    unless current_user == @user
+      flash[:error] =
+        "You are not authorized to access that user's information."
+      redirect_to user_path(current_user)
+    end
   end
 end
