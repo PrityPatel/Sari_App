@@ -61,7 +61,7 @@ def index
     if user.destroy
       redirect_to root_path, notice: "Profile Deleted!"
     else
-      flash[:notice] =
+      flash[:error] =
       "Error deleting profile!"
       redirect_to user_path(current_user)
     end
