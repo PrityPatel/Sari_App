@@ -1,42 +1,36 @@
 <div class="container">
-
   <h2><%= @user.name %>'s Personal Profile Page</h2>
-  <ul>
-  <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
-  <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
-  <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
-  <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
-  <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
-</ul>
-<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "800" height= "300">
-<h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
-
-<h2>Is the Sari staging a comeback with Indian women?</h2>
-<h2>We want You to have an active influence on the Sari styles that trend in the marketplace.</h2>
-<br>
-<br>
-  Inside almost every Indian woman's wardrobe, you will find a sari - the long, and usually colourful piece of cotton or silk used to drape around the body. And while to an outsider sari styles may look similar, in India, there are hundreds of ways of draping them. Every generation, community and region interprets it differently.
+    <ul>
+    <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
+    <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
+    <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
+    <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+    <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
+    </ul>
+  <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "800" height= "300">
+  <h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
+  <h2>Is the Sari staging a comeback with Indian women?</h2>
+  <h2>We want You to have an active influence on the Sari styles that trend in the marketplace.</h2><br><br>
+    Inside almost every Indian woman's wardrobe, you will find a sari - the long, and usually colourful piece of cotton or silk used to drape around the body. And while to an outsider sari styles may look similar, in India, there are hundreds of ways of draping them. Every generation, community and region interprets it differently.
+    <br><br>
+    A sari, saree or shari is a South Asian female garment that consists of a drape varying from five to nine yards in length and two to four feet in breadth that is typically wrapped around the waist, with one end draped over the shoulder, baring the midriff.
+    <br><br>
+    The sari is associated with grace and is widely regarded as a symbol of Indian culture.
+    <br><br>
+  <h3>Scroll Down to View All of Your Posts</h3>
+  <h4>Don't see anything yet? <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %></h4>
   <br><br>
-  A sari, saree or shari is a South Asian female garment that consists of a drape varying from five to nine yards in length and two to four feet in breadth that is typically wrapped around the waist, with one end draped over the shoulder, baring the midriff.
-  <br><br>
-  The sari is associated with grace and is widely regarded as a symbol of Indian culture.
-  <br><br>
-<h3>Scroll Down to View All of Your Posts</h3>
-<h4>Don't see anything yet? <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %></h4>
-<br>
-<br>
 <% @user_saris.each do |sari| %>
 <div class="col-md-4">
-  <br>
   <br>
   <img src='<%= sari.image %>' width="200" height="200"><br>
   <%= sari.story %> <br>
   <% if current_user == @user %>
-  <%= link_to 'Edit Gallery', edit_sari_path(sari), class: "btn btn-default" %>
-  <%= link_to 'Delete Gallery', sari_path(sari), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+  <%= link_to 'Edit', edit_sari_path(sari), class: "btn btn-default" %>
+  <%= link_to 'Delete', sari_path(sari), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
 </div>
-    <% end %>
   <% end %>
+<% end %>
 </div>
 <br><br><br>
 <ul><center>
@@ -44,5 +38,5 @@
   <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
   <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
   <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
-  <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %><center>
-</ul>
+  <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
+  <center></ul>
