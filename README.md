@@ -10,31 +10,31 @@ Project #2: Building A Full-stack Application
 
 - [x] * **Have complete RESTful routes** for at least one of your resources with GET, POST, PUT, PATCH, and DELETE.
 
- [x] * **Ensure that the relationships between models** are fully implemented.
+- [x] * **Ensure that the relationships between models** are fully implemented.
 
-[x] * Have **semantically correct HTML and CSS**. Feel free to use a CSS framework of your choosing.
+- [x] * Have **semantically correct HTML and CSS**. Feel free to use a CSS framework of your choosing.
 
-[x] * **Your app must be deployed and demoed online**.
+- [x] * **Your app must be deployed and demoed online**.
 
 ---
 
 ### Necessary Deliverables
 
-[x] * A **working full-stack application, built by you**, hosted somewhere on the internet.
+- [x] * A **working full-stack application, built by you**, hosted somewhere on the internet.
 
-[x] * A **git repository hosted on Github**
+- [x] * A **git repository hosted on Github**
 
-[x] * A **link to your hosted working app** in the URL section of your Github repo.
+- [x] * A **link to your hosted working app** in the URL section of your Github repo.
 
-[]* **A ``readme.md`` file** with explanations of:
+- []* **A ``readme.md`` file** with explanations of:
 
- [] * The technologies used
+ - [] * The technologies used
 
-  []* Installation instructions (seed data, etc.)
+  - []* Installation instructions (seed data, etc.)
 
-  []* Unsolved problems, etc.
+  - []* Unsolved problems, etc.
 
-[x]* **Wireframes attached to a Trello card**.
+- [x]* **Wireframes attached to a Trello card**.
 
 ---
 
