@@ -1,33 +1,32 @@
-
-<h2>Hi <%= current_user.name %>! Browse to see what's trending in Sari fashions!</h2>
-<h4><%= link_to 'Go to Your Profile Page', user_path(current_user) %></h4>
+<div class="container">
+  <div class="jumbotron">
+  <h2>Hi <%= current_user.name %>! Browse to see what's trending in Sari fashions!</h2>
+  <h4><%= link_to 'Go to Your Profile Page', user_path(current_user), class: "btn btn-success" %></h4></div>
 <article>
-  Is the Sari staging a comeback with Indian women? We think so and we want You to have an active influence on the Sari styles that trend in the marketplace.
+  <h4><center>Is the Sari staging a comeback with Indian women? We think so and we want You to have an active influence on the Sari styles that trend in the marketplace.</center></h4>
   </article><br>
-<center><h3>Have an influence on what's trending... <%= link_to 'Upload Your Sari Gallery!', new_sari_path %></h3>
+<center><h3>Have an influence on what's trending... <%= link_to 'Upload Your Sari Gallery!', new_sari_path, class: "btn btn-success" %></h3>
 <h3>Like, Comment and Connect with other users!</h3>
 <h2>Make Friends and Create Trends!</h2></center>
-
-
-
 <br>
 <% @saris.each do |sari| %>
+<div class="col-md-4">
 <br>
 <br>
- <center>Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
+ Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
  <img src='<%= sari.image %>' width="200" height="200"><br>
  <%= sari.story %> <br>
- <br>
+ <br></div>
  <% end %>
 <br>
-<br>
-<br>
-<%= link_to 'Go to Your Profile Page', user_path(current_user) %>
-<br>
-<br>
-<%= link_to 'Logout', session_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
-<br>
-<br>
+</div>
+<%= link_to 'Go to Your Profile Page', user_path(current_user), class: "btn btn-success" %>
+<%= link_to 'Logout', session_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
 
-<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "500" height= "200">
-</center>
+<br>
+<br>
+<!-- <div class="container">
+  <div class="text-center">
+<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "500" height= "200"><br></div>
+</div> -->
+</div>

@@ -1,22 +1,22 @@
-<h1>Login</h1>
-  <%= form_tag sessions_path do %>
-    <div class="field">
-      <%= label_tag :email %>
-      <%= text_field_tag :email, params[:email] %>
-    </div>
-    <div class="field">
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-    </div>
-    <div class="actions"><%= submit_tag "Log in" %></div>
-  <% end %>
+<div class="container">
+
+
+  <h1>Login</h1>
+      <%= bootstrap_form_tag url: '/sessions' do |f| %>
+      <%= f.email_field :email %>
+      <%= f.password_field :password %>
+      <%= f.submit "Log in", class:"btn btn-success" %>
+      <% end %>
+      <br>
+      <br>
+  <button type="button" class="btn btn-default">
+  <%= link_to "Haven't Registered Yet? Sign Up Here!", new_user_path %></button>
   <br>
   <br>
-  <%= link_to "Haven't Registered Yet? Sign Up Here!", new_user_path %>
-  <br>
-  <br>
-  <%= link_to 'Back to Welcome Page', root_path %>
+  <button type="button" class="btn btn-default">
+  <%= link_to 'Back to Welcome Page', root_path %></button>
 <br>
 <br>
 <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"><h4>Make Friends and Create Trends!</h4>
+</div>
 

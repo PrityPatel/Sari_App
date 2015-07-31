@@ -1,44 +1,42 @@
+<div class="container">
 
-<h2><%= @user.name %>'s Personal Profile Page</h2>
-<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "500" height= "200">
+  <h2><%= @user.name %>'s Personal Profile Page</h2>
+  <ul>
+  <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
+  <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
+  <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
+  <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+  <%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+</ul>
+<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "800" height= "300">
 <h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
+
 <h2>Is the Sari staging a comeback with Indian women?</h2>
 <h2>We want You to have an active influence on the Sari styles that trend in the marketplace.</h2>
 <br>
-<ul>
-  <li><%= link_to 'Create New Sari Gallery', new_sari_path %></li><br>
-  <li><%= link_to 'See What Others Are Posting', saris_path %> </li><br>
-  <li><%= link_to 'Edit Your Profile', edit_user_path %></li><br>
-</ul>
-<br>
-<br>
 <br>
 <h3>Scroll Down to View All of Your Posts</h3>
-<h4>Don't see anything yet?  <%= link_to 'Create New Sari Gallery by clicking here', new_sari_path %></h4>
+<h4>Don't see anything yet? <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %></h4>
+<br>
 <br>
 <% @user_saris.each do |sari| %>
-  <center><img src='<%= sari.image %>' width="200" height="200"><br>
-  <%= sari.story %>
+<div class="col-md-4">
   <br>
+  <br>
+  <img src='<%= sari.image %>' width="200" height="200"><br>
+  <%= sari.story %> <br>
   <% if current_user == @user %>
-     <%= link_to 'Edit Gallery', edit_sari_path(sari) %>
-     <%= link_to 'Delete Gallery', sari_path(sari), method: :delete, data: {confirm: "Are you sure?"} %>
-     <br>
-   </center>
-     <br>
-     <br>
+  <%= link_to 'Edit Gallery', edit_sari_path(sari), class: "btn btn-default" %>
+  <%= link_to 'Delete Gallery', sari_path(sari), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+</div>
     <% end %>
   <% end %>
-
-<br>
-<br>
-<br>
-<%= link_to 'Browse Sari Galleries', saris_path(current_user) %>
-<br>
-<br>
-<%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"} %>
-<br>
-<br>
-<%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
-<br>
-
+</div>
+<br><br><br>
+<ul><center>
+  <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
+  <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
+  <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
+  <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+  <%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %><center>
+</ul>

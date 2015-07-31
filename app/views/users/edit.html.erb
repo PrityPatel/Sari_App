@@ -1,5 +1,6 @@
-<h1>Edit Profile</h1>
-<%= form_for @user do |f| %>
+<div class="container">
+  <h1>Edit Profile</h1>
+<%= bootstrap_form_for @user do |f| %>
 <% if @user.errors.any? %>
   <div class="error_messages">
     <h2>Form is invalid</h2>
@@ -11,19 +12,15 @@
   </div>
 <% end %>
 <div class="field">
-  <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
 <div class="field">
-  <%= f.label :email %>
   <%= f.text_field :email %>
 </div>
 <div class="field">
-  <%= f.label :password %>
   <%= f.password_field :password %>
 </div>
 <div class="field">
-  <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 </div>
 <div class="actions"><%= f.submit %></div>
@@ -33,7 +30,9 @@
 <%= link_to 'Cancel', user_path(current_user) %>
 <br>
 <br>
-<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg">
+<div class="container">
+<img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"></div>
+</div>
 <br>
 <br>
 <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>

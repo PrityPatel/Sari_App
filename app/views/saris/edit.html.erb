@@ -1,5 +1,6 @@
-<h1>Update Sari Gallery</h1>
-<%= form_for @sari do |f| %>
+<div class="container">
+  <h1>Update Sari Gallery</h1>
+<%= bootstrap_form_for @sari do |f| %>
 <% if @sari.errors.any? %>
   <div class="error_messages">
     <h2>Upload is invalid</h2>
@@ -11,28 +12,23 @@
   </div>
 <% end %>
 <div class="field">
-  <%= f.label :image %>
   <%= f.text_field :image %>
 </div>
 <div class="field">
-  <%= f.label :story %>
   <%= f.text_field :story %>
 </div>
 <div class="field">
-  <%= f.label :owner %>
   <%= f.text_field :owner %>
 </div>
 <br>
 <div class="actions"><%= f.submit %></div>
 <% end %>
 <br>
-
 <br>
-<br>
-
+<div class="container">
 <%= link_to 'Cancel', user_path(current_user) %>
-
-
+</div>
+</div>
 
 
 
