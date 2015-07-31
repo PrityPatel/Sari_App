@@ -58,10 +58,10 @@ def index
   def destroy
     user = User.find(params[:id])
     if user.destroy
+      flash[:notice] =
+      "Profile deleted!"
       redirect_to root_path
     else
-      flash[:error] =
-      "Error attempting to delete user."
       redirect_to user_path(current_user)
     end
   end

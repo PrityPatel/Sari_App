@@ -40,6 +40,6 @@
   <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
   <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
   <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
-  <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+  <%= link_to 'Delete Profile', user_path(current_user), method: :destroy, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
   <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
   <center></ul>
