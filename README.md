@@ -14,8 +14,8 @@
 
  ## Technologies Used:
 
-  - Ruby programming language
   - Rails web application framework
+  - Ruby programming language
   - Postgresql database management system
   - ActiveRecord to access pSQL database
   - Bootstrap css framework
