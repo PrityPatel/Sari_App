@@ -1,4 +1,7 @@
 class SarisController < ApplicationController
+  before_action :authenticate
+  before_action :authorize, only: [:edit, :update, :destroy]
+
   #   saris GET    /saris(.:format)          saris#index
   # get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index
   def index
@@ -62,6 +65,16 @@ class SarisController < ApplicationController
   private
   def sari_params
     params.require(:sari).permit(:image, :story, :owner)
+  end
+
+  def authorize
+    @sari = Sari.find_by_id(params[:id])
+    @user = User.find_by_id(@sari.user_id)
+    unless current_user == @user
+      flash[:error] =
+        "You are not authorized to access that user's information."
+      redirect_to user_path(current_user)
+    end
   end
 end
 
