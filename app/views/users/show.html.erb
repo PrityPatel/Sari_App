@@ -6,7 +6,7 @@
   <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
   <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
   <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
-  <%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
+  <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
 </ul>
 <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "800" height= "300">
 <h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
@@ -44,5 +44,5 @@
   <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
   <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
   <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
-  <%= link_to 'Logout', session_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %><center>
+  <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %><center>
 </ul>
