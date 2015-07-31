@@ -59,10 +59,10 @@ def index
     user = User.find(params[:id])
     user.saris.destroy_all
     if user.destroy
-      flash[:notice] =
-      "Profile deleted!"
-      redirect_to root_path
+      redirect_to root_path, notice: "Profile Deleted!"
     else
+      flash[:notice] =
+      "Error deleting profile!"
       redirect_to user_path(current_user)
     end
   end
