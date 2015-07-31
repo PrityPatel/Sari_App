@@ -13,7 +13,6 @@
   - A place for designers and retailers to come and see what's trending.
 
  ## Technologies Used:
-
   - Rails web application framework
   - Ruby programming language
   - Postgresql database management system
