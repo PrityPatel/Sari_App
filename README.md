@@ -2,7 +2,8 @@
 
 # Sari Trends, Friends & Styles
 
-  A **working full-stack application (with initial seed data) hosted on heroku:
+  A working full-stack application (with initial seed data) hosted on heroku:
+
   `http://agile-retreat-4381.herokuapp.com/`
 
   - A place for users to upload images of their favorite saris as well as sari images.
@@ -43,7 +44,7 @@
 
 ---
 
- ** Wireframes, ERDs, User Stories (MVP and Icebox):**
+ ## Wireframes, ERDs, User Stories (MVP and Icebox):
 
   -  Attached along with App statement via Trello:
     - `https://trello.com/b/kwpJUzcG/sari-app`
