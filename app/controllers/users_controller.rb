@@ -57,6 +57,7 @@ def index
 # delete the profile of the current user
   def destroy
     user = User.find(params[:id])
+    user.saris.destroy_all
     if user.destroy
       flash[:notice] =
       "Profile deleted!"
