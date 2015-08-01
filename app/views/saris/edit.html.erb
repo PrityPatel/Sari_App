@@ -4,6 +4,14 @@
 
 <div class="container">
   <h1>Update Sari Gallery</h1>
+  <ul>
+    <h4>File Upload is coming soon. For now, there are 2 ways to upload your images...</h4>
+      <li>Go to imgur.com to upload your image. Imgur will give you a URL, which you can then paste into the Image field below.</li>
+      <li>Find an image you like online and paste the URL for it in the Image field in the form below.</li><br>
+      <h5>Just in case you're not sure...</h5>
+      <li>Story field is the caption that will appear with the image you upload. It can be a story about the image or comment on it, etc. </li>
+      <li>Owner is an optional field where you can list if you own it, if it belongs to someone you know, if it was a special gift, etc. or it can be the source of your image (e.g., Google Images). What you list in this field is currently not visible to other users.</li>
+  </ul><br><br>
   <%= bootstrap_form_for @sari do |f| %>
     <% if @sari.errors.any? %>
     <div class="error_messages">
