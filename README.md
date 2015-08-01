@@ -1,6 +1,6 @@
 
 
-# Sari Trends, Friends & Styles
+# Sari Friends, Trends & Styles
 
   A working full-stack application (with initial seed data) hosted on heroku:
 
