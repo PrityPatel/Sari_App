@@ -60,9 +60,9 @@
   - Sprint 2:
     - Include the ability for users to comment and like other's postings
     - Include search and filter features
-        -Sort by: most active, most recent, alphabetical, etc.
-        -Search by keyword, would be in later sprints
-      - Include a blog page
+      - Sort by: most active, most recent, alphabetical, etc.
+      - Search by keyword, would be in later sprints
+    - Include a blog page
 
   - Sprint 3:
     - Pinterest API
