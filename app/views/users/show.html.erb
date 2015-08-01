@@ -4,9 +4,9 @@
 <div class="container">
   <h2><%= @user.name %>'s Personal Profile Page</h2>
     <ul>
-    <%= link_to "What Others Have Posted", saris_path, class: "btn btn-success" %>
-    <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
     <%= link_to "Trending Now", saris_path, class: "btn btn-success" %>
+    <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
+    <%= link_to "What Others Have Posted", saris_path, class: "btn btn-success" %>
     <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
     <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
     <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
