@@ -12,7 +12,7 @@
 
   - A place for designers and retailers to come and see what's trending.
 
- ## Technologies Used:
+## Technologies Used:
   - Rails web application framework
   - Ruby programming language
   - Postgresql database management system
@@ -42,29 +42,31 @@
 
     - You now have a local copy on your computer and a remote copy on Github. Open the local files in your favorite text editor, such as Sublime Text.
 
----
 
- ## Wireframes, ERDs, User Stories (MVP and Icebox):
+## Sprints:
 
-  -  Attached along with App statement via Trello:
-    - `https://trello.com/b/kwpJUzcG/sari-app`
-
-  - Sprint 1:
+  - **Sprint 1:**
     - Log-in and Sign up functionality with encrypted passwords & authorization flow
     - Full CRUD on User Model
     - Full CRUD on Sari Model
     - RESTful routes on for users resource
     - RESTful routes on for saris resource
 
-  - Sprint 2:
+  - **Sprint 2:**
     - Include the ability for users to comment and like other's postings
     - Include search and filter features
       - Sort by: most active, most recent, alphabetical, etc.
       - Search by keyword, would be in later sprints
     - Include a blog page
 
-  - Sprint 3:
+  - **Sprint 3:**
     - Pinterest API
+
+
+## Wireframes, ERDs, User Stories (MVP and Icebox):
+
+  -  Attached along with App statement via Trello:
+    - `https://trello.com/b/kwpJUzcG/sari-app`
 
 ---
 
