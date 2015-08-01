@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :authorize
 
   # normally this would be all users, though i have chosen not to show an index of all users, though in case someone goes to a link /users, it will redirect to the root path
-# get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index
+# get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index; def authorize will kick in and user will see a message that they are not authorized
 def index
     if logged_in?
       @saris = Sari.all
