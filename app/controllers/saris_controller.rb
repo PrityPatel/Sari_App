@@ -3,13 +3,9 @@ class SarisController < ApplicationController
   before_action :authorize, only: [:edit, :update, :destroy]
 
   #   saris GET    /saris(.:format)          saris#index
-  # get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index; def authorize will kick in and user will see a message that they are not authorized
+  # get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index as def authorize will kick in and user will see a message that they are not authorized
   def index
-    if logged_in?
       @saris = Sari.all
-    else
-      redirect_to root_path
-    end
   end
 
 #  new_sari GET    /saris/new(.:format)      saris#new
