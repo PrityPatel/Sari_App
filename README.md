@@ -57,8 +57,8 @@
 
     - Include a blog page
 
-  -Sprint 3:
-    -Pinterest API
+  - Sprint 3:
+    - Pinterest API
 
 ---
 
