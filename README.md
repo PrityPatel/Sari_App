@@ -49,8 +49,8 @@
     - Log-in and Sign up functionality with encrypted passwords & authorization flow
     - Full CRUD on User Model
     - Full CRUD on Sari Model
-    - RESTful routes on for users resource
-    - RESTful routes on for saris resource
+    - RESTful routes on users resource
+    - RESTful routes on saris resource
 
   - **Sprint 2:**
     - Include the ability for users to comment and like other's postings
