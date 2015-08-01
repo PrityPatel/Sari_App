@@ -25,7 +25,8 @@
 
   - **To View as a User:**
 
-    - Open the browser of your choice on your computer and navigate to: `http://agile-retreat-4381.herokuapp.com/` .
+    - Open the browser of your choice on your computer and navigate to:
+    `http://agile-retreat-4381.herokuapp.com/` .
 
     - Start by setting up an account. After which you will be taken to your profile page. From your profile page, you can access an index of all styles trending.
 
@@ -47,6 +48,17 @@
 
   -  Attached along with App statement via Trello:
     - `https://trello.com/b/kwpJUzcG/sari-app`
+
+  - Sprint 2:
+    - Include the ability for users to comment and like other's postings
+    - Include search and filter features
+      -Sort by: most active, most recent, alphabetical, etc.
+      -Search by keyword, would be in later sprints
+
+    - Include a blog page
+
+  -Sprint 3:
+    -Pinterest API
 
 ---
 

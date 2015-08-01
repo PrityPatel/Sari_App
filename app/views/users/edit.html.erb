@@ -32,10 +32,10 @@
 <br>
 <div class="container">
 <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"></div>
+<br>
+<br>
+<%= link_to 'Delete Profile', user_path(current_user), class: "btn btn-default",  method: :delete, data: {confirm: "Are you sure?"} %>
 </div>
-<br>
-<br>
-<%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"} %>
 
 
 
