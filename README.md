@@ -26,7 +26,7 @@
   - **To View as a User:**
 
     - Open the browser of your choice on your computer and navigate to:
-      `http://agile-retreat-4381.herokuapp.com/` .
+      - `http://agile-retreat-4381.herokuapp.com/` .
 
     - Start by setting up an account. After which you will be taken to your profile page. From your profile page, you can access an index of all styles trending.
 
