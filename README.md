@@ -2,7 +2,7 @@
 
 # Sari Friends, Trends & Styles
 
-  A working full-stack application (with initial seed data) hosted on heroku:
+  A working full-stack application (with initial seed data) hosted on heroku at:
 
   `http://agile-retreat-4381.herokuapp.com/`
 
@@ -17,7 +17,7 @@
   - Ruby programming language
   - Postgresql database management system
   - ActiveRecord to access pSQL database
-  - Bootstrap css framework
+  - Bootstrap CSS framework
   - HTML with Embedded Ruby for structure of webpage
 
 
@@ -26,6 +26,7 @@
   - **To View as a User:**
 
     - Open the browser of your choice on your computer and navigate to:
+
     `http://agile-retreat-4381.herokuapp.com/` .
 
     - Start by setting up an account. After which you will be taken to your profile page. From your profile page, you can access an index of all styles trending.
@@ -48,6 +49,13 @@
 
   -  Attached along with App statement via Trello:
     - `https://trello.com/b/kwpJUzcG/sari-app`
+
+  - Sprint 1:
+    - Log-in and Sign up functionality with encrypted passwords & authorization flow
+    - Full CRUD on User Model
+    - Full CRUD on Sari Model
+    - RESTful routes on for users resource
+    - RESTful routes on for saris resource
 
   - Sprint 2:
     - Include the ability for users to comment and like other's postings
