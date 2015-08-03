@@ -11,10 +11,10 @@
     </ul>
   </div>
 <% end %>
-  <%= f.text_field :name , placeholder="Your Name (Case Sensitive)" %>
-  <%= f.email_field :email %>
-  <%= f.password_field :password %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.text_field :name, placeholder: "Enter your name" %>
+  <%= f.email_field :email, placeholder: "Enter your email" %>
+  <%= f.password_field :password, placeholder: "Enter your password" %>
+  <%= f.password_field :password_confirmation, placeholder: "Enter your password again" %>
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>
   </div>

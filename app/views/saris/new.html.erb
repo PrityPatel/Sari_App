@@ -22,13 +22,13 @@
   </div>
 <% end %>
 <div class="field">
-  <%= f.text_field :image %>
+  <%= f.text_field :image, placeholder: "Image URL" %>
 </div>
 <div class="field">
-  <%= f.text_field :story %>
+  <%= f.text_field :story, placeholder: "This is the caption that will appear with the image you upload" %>
 </div>
 <div class="field">
-  <%= f.text_field :owner %>
+  <%= f.text_field :owner, placeholder: "Optional" %>
 </div>
 <br>
 <div class="actions"><%= f.submit class: "btn btn-success" %></div>
