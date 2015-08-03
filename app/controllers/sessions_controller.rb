@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 # sessions POST   /sessions(.:format)       sessions#create
 # log-in credentials - create new session
  def create
-   user = User.find_by(email: params[:email])
+   user = User.find_by(email: params[:email] && name: params[:name])
    if user && user.authenticate(params[:password])
      session[:user_id] = user.id
      redirect_to user_path(user.id)
