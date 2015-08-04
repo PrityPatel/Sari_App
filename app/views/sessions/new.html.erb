@@ -3,7 +3,6 @@
 
   <h1>Login</h1>
       <%= bootstrap_form_tag url: '/sessions' do |f| %>
-      <%= f.text_field :name, placeholder: "Enter your name (case sensitive)" %>
       <%= f.email_field :email, placeholder: "Enter the email you registered with" %>
       <%= f.password_field :password, placeholder: "Enter your password" %>
       <%= f.submit "Log in", class:"btn btn-success" %>
