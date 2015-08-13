@@ -24,6 +24,13 @@
   <br>
   <div class="container"><center>
   <h4>Make Friends and Create Trends!</h4>
+  <% @saris.each do |sari| %>
+<div class="col-md-4"><br><br>
+  Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
+  <img src='<%= sari.image %>' width="200" height="200"><br>
+  <%= sari.story %> <br><br>
+</div>
+<% end %>
   <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"></center>
   </div>
 

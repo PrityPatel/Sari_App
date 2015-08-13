@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   # new_session GET    /sessions/new(.:format)   sessions#new
   def new
- end
+  end
 
 # sessions POST   /sessions(.:format)       sessions#create
 # log-in credentials - create new session

@@ -5,7 +5,13 @@ class SarisController < ApplicationController
   #   saris GET    /saris(.:format)          saris#index
   # get view with all saris (saris#index controller action) which shows all saris by all users on one page, but only if logged in. if someone attempts to go to /saris page, then they will be redirected to the welcome index as def authorize will kick in and user will see a message that they are not authorized
   def index
-      @saris = Sari.all
+    if params[:filter] == "most_recent"
+      @saris = Sari.most_recent
+    elsif params[:filter] == "oldest"
+      @saris = Sari.oldest
+    else
+      @saris = Sari.all.shuffle
+    end
   end
 
 #  new_sari GET    /saris/new(.:format)      saris#new

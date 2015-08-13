@@ -13,7 +13,7 @@
 <% end %>
   <%= f.text_field :name, placeholder: "Enter your name (case sensitive)" %>
   <%= f.email_field :email, placeholder: "Enter your email" %>
-  <%= f.password_field :password, placeholder: "Enter your password" %>
+  <%= f.password_field :password, placeholder: "Enter your password. Must be at least 5 characters" %>
   <%= f.password_field :password_confirmation, placeholder: "Enter your password again" %>
   <div class="actions">
     <%= f.submit class: "btn btn-success" %>

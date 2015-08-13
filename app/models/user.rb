@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
   has_many :saris
 
   has_secure_password
-  validates :name, :email, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }, presence: true, uniqueness: true
+  validates :password, length: {in: 5..11}
 end
