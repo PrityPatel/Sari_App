@@ -2,16 +2,18 @@
 <!--  user GET    /users/:id(.:format)      users#show -->
 
 <div class="container">
-  <h2><%= @user.name %>'s Personal Profile Page</h2>
-    <ul>
+  <div class="profile">
+    <h2><%= @user.name %>'s Personal Profile Page</h2>
+    <center><ul>
     <%= link_to "Trending Now", saris_path, class: "btn btn-success" %>
     <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
     <%= link_to "What Others Have Posted", saris_path, class: "btn btn-success" %>
     <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
     <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
     <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
-    </ul>
-  <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "900" height= "300">
+    </ul></center>
+  </div><br><center>
+  <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg" width = "900" height= "300"></center>
   <h4>Show Us What Your Sari Style Is! Make Friends and Create Trends!</h4>
   <h2>Is the Sari staging a comeback with Indian women?</h2>
   <h2>We want You to have an active influence on the Sari styles that trend in the marketplace.</h2><br><br>
@@ -37,12 +39,12 @@
 <% end %>
 </div>
 <br><br><br>
-<div class="container">
-<ul>
+<div class="container footer">
+<center><ul>
   <%= link_to 'Create New Sari Gallery', new_sari_path, class: "btn btn-success" %>
   <%= link_to "See What's Trending Now", saris_path, class: "btn btn-success" %>
   <%= link_to 'Edit Your Profile', edit_user_path, class: "btn btn-success" %>
   <%= link_to 'Delete Profile', user_path(current_user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-success" %>
   <%= link_to 'Logout', session_path, method: :delete, class: "btn btn-success" %>
-</ul>
+</ul></center>
 </div>

@@ -18,3 +18,26 @@
   @import 'bootstrap-sprockets';
   @import 'bootstrap';
 
+.jumbotron {
+  background-color: purple;
+  color: white;
+}
+
+.profile {
+  margin-top: 5px;
+  padding: 5px 10px 20px 10px;
+  border-radius: 10px;
+  background-color: purple;
+  color: white;
+}
+
+.footer {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: purple;
+  color: white;
+}
+
+ul {
+  margin: 0;
+}
