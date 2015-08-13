@@ -1,39 +1,50 @@
 <!-- this is the root page... the page that renders when directed to the root path -->
 
 <div class="container">
-  <div class="jumbotron"><h1><center>Sari Friends, Trends & Styles</center></h1>
-    <p class="lead"><h4><center>Make Friends and Create Trends!</center></h4></p>
+  <div class="jumbotron">
+    <h1><center>Sari Friends, Trends & Styles</center></h1>
+    <p class="lead">
+      <h4><center>Make Friends and Create Trends!</center></h4>
+    </p>
     <br><br>
-      <center>
-        <%= link_to 'New to Our Site? Sign Up Now!', new_user_path, class: "btn btn-success" %>
-        <%= link_to 'Already Registered? Log-in Again!', new_session_path, class: "btn btn-success" %>
-      </center>
-  </div>
-  <br>
-  <article>
-  Is the Sari staging a comeback with Indian women? We think so and we want You to have an active influence on the Sari styles that trend in the marketplace.
-  <br><br>
-  Inside almost every Indian woman's wardrobe, you will find a sari - the long, and usually colourful piece of cotton or silk used to drape around the body. And while to an outsider sari styles may look similar, in India, there are hundreds of ways of draping them. Every generation, community and region interprets it differently.
-  <br><br>
-  A sari, saree or shari is a South Asian female garment that consists of a drape varying from five to nine yards in length and two to four feet in breadth that is typically wrapped around the waist, with one end draped over the shoulder, baring the midriff.
-  <br><br>
-  The sari is associated with grace and is widely regarded as a symbol of Indian culture.
-  <br><br>
-  </article>
-  <h4>Show Us What Your Sari Style Is...</h4>
-  <br>
-  <div class="container"><center>
-  <h4>Make Friends and Create Trends!</h4>
-  <% @saris.each do |sari| %>
-<div class="col-md-4"><br><br>
-  Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
-  <img src='<%= sari.image %>' width="200" height="200"><br>
-  <%= sari.story %> <br><br>
-<% end %>
-</div>
-<div class="container">
-  <img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"></center>
+    <center>
+      <%= link_to 'New to Our Site? Sign Up Now!', new_user_path, class: "btn btn-success" %>
+      <%= link_to 'Already Registered? Log-in Again!', new_session_path, class: "btn btn-success" %>
+    </center>
   </div>
 
+  <br>
+
+  <article>
+    <p>Is the Sari staging a comeback with Indian women? We think so and we want You to have an active influence on the Sari styles that trend in the marketplace.</p>
+
+    <p>Inside almost every Indian woman's wardrobe, you will find a sari - the long, and usually colourful piece of cotton or silk used to drape around the body. And while to an outsider sari styles may look similar, in India, there are hundreds of ways of draping them. Every generation, community and region interprets it differently.</p>
+
+    <p>A sari, saree or shari is a South Asian female garment that consists of a drape varying from five to nine yards in length and two to four feet in breadth that is typically wrapped around the waist, with one end draped over the shoulder, baring the midriff.</p>
+
+    <p>The sari is associated with grace and is widely regarded as a symbol of Indian culture.</p>
+  </article>
+
+  <br><br>
+
+  <h4>Show Us What Your Sari Style Is...</h4>
+  <br>
+
+  <div>
+    <h4><center>Make Friends and Create Trends!</center></h4>
+    <% @saris.each do |sari| %>
+    <div class="col-md-4"><br><br><center>
+      Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
+      <img src='<%= sari.image %>' width="200" height="200"><br>
+      <%= sari.story %> <br><br></center>
+    </div>
+    <% end %>
+  </div>
+
+  <center><img src="http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/17/enhanced-buzz-8157-1381873037-33.jpg"></center>
+
 </div>
+
+
+
 
