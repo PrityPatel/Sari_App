@@ -34,9 +34,9 @@
     <h4><center>Make Friends and Create Trends!</center></h4>
     <% @saris.each do |sari| %>
     <div class="col-md-4"><br><br><center>
-      Posted by: <%= User.find_by_id(sari.user_id).name %> <br>
-      <img src='<%= sari.image %>' width="200" height="200"><br>
-      <%= sari.story %> <br><br></center>
+      <br>
+      <img src='<%= sari.image %>' width="200" height="200">
+       </center>
     </div>
     <% end %>
   </div>
